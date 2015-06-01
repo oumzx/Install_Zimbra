@@ -57,15 +57,10 @@ echo "7. Install Zimbra "
 cd ./zcs-8.6.0_GA_1153.RHEL7_64.20141215151110
 
 mv -vf install.sh install.sh.bak
-wget http://passidiweb.site50.net/Script/utilfunc.sh
-wget http://passidiweb.site50.net/Script/globals.sh	
-wget http://passidiweb.site50.net/Script/install.sh
-wget http://passidiweb.site50.net/Script/zmsetup.pl
-wget http://passidiweb.site50.net/Script/postinstall.pm
 
-cp -rvp utilfunc.sh /tmp/zcs-8.6.0_GA_1153.RHEL7_64.20141215151110/util/utilfunc.sh
-cp -rvp globals.sh  /tmp/zcs-8.6.0_GA_1153.RHEL7_64.20141215151110/util/globals.sh
-cp -rvp install.sh /tmp/zcs-8.6.0_GA_1153.RHEL7_64.20141215151110/install.sh
+cp -rvp ./util/utilfunc.sh /tmp/zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116/util/utilfunc.sh
+cp -rvp ./util/globals.sh  /tmp/zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116/util/globals.sh
+cp -rvp install.sh /tmp/zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116/install.sh
 chmod 777 install.sh
 
 hostname $ALIAS.$DOMAINE
