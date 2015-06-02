@@ -6,10 +6,14 @@ Ce script permet d'installer Zimbra Mail Server 8.6 sur toutes les distributions
 - CENTOS 7.1 (Gandi)
 - DEBIAN 7 (Gandi)
 
+
 USAGE
+------------------
 
-"Zimbra_Install_ALL.sh"
+Executer "Zimbra_Install_ALL.sh"
 
-Exemple
+  EXEMPLE
 
-./Zimbra_Install_ALL.sh
+    $ ./Zimbra_Install_ALL.sh
+
+
