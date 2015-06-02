@@ -13,7 +13,7 @@ if [ $PLATFORM = "RHEL7_64" ]; then
 	./Zimbra_Install_RHEL.sh $ALIAS $DOMAINE
 fi
 
-if [ $PLATFORM = "UBUNTU" ]; then 
+if [ $PLATFORM = "UBUNTU14_64" ]; then 
 
 	chmod 777 Zimbra_Install_UBUNTU.sh
 	./Zimbra_Install_UBUNTU.sh $ALIAS $DOMAINE
