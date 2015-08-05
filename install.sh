@@ -315,11 +315,11 @@ fi
 # Installation complete, now configure
 #
 
-chmod 777 ./setupt/zmsetup.pl
-chmod 777 ./setup/postinstall.pm
+chmod 777 zmsetup.pl
+chmod 777 postinstall.pm
 
-cp -vpr ./setup/zmsetup.pl /opt/zimbra/libexec/zmsetup.pl 
-cp -vpr ./setup/postinstall.pm /opt/zimbra/libexec/postinstall.pm
+cp -vpr zmsetup.pl /opt/zimbra/libexec/zmsetup.pl 
+cp -vpr postinstall.pm /opt/zimbra/libexec/postinstall.pm
 
 #########################################################################################################
 
