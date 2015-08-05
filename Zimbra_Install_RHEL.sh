@@ -70,8 +70,10 @@ hostname $ALIAS.$DOMAINE
 HOST=$(hostname)
 VAR=$(echo $IP  $HOST $ALIAS)
 sed -i "s/$IP.*$/$VAR/g" /etc/hosts
-#echo $VAR >> /etc/hosts 
-
+codeRetour=$?
+if [ "$codeRetour" = 1 ]; then
+echo $VAR >> /etc/hosts 
+fi
 ./install.sh --platform-override
 
 #Config Done
