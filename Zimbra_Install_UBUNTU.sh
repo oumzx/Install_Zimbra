@@ -11,7 +11,7 @@ echo "# License : GPL, General Public License					       					#"
 echo "##################################################################################"
 
 echo "Variable"
-
+CHM=$(pwd)
 ALIAS=$1
 DOMAINE=$2
 echo "ALIAS   :" $ALIAS
@@ -38,7 +38,7 @@ apt-get -y install libgmp10 libperl-dev libperl5.18 libaio1 unzip pax sysstat sq
 
 echo "3. Downloads zimbra"
 
-pushd /tmp 
+cd /tmp 
 wget https://files.zimbra.com/downloads/8.6.0_GA/zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116.tgz
 
 echo "6. Unzip / fichier d'installation Zimbra"
@@ -54,6 +54,8 @@ apt-get install resolvconf -qy
 
 #mv -vf install.sh install.sh.bak
 mv -vf /tmp/zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116/install.sh /tmp/zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116/install.sh.bak
+
+cd $CHM
 
 cp -rvp ./util/utilfunc.sh /tmp/zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116/util/utilfunc.sh
 cp -rvp ./util/globals.sh  /tmp/zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116/util/globals.sh
