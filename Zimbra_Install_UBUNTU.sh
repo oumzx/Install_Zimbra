@@ -70,7 +70,7 @@ VAR=$(echo $IP  $HOST $ALIAS)
 sed -i "s/$IP.*$/$VAR/g" /etc/hosts
 grep ^$VAR$ /etc/hosts
 codeRetour=$?
-if [ "$codeRetour" = 1 ]; then
+if [ "$codeRetour" = 1 ] || [ "$codeRetour" = 2 ]; then
 echo $VAR >> /etc/hosts 
 fi
 
