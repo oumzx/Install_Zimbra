@@ -38,7 +38,7 @@ apt-get -y install libgmp10 libperl-dev libperl5.18 libaio1 unzip pax sysstat sq
 
 echo "3. Downloads zimbra"
 
-cd /tmp 
+pushd /tmp 
 wget https://files.zimbra.com/downloads/8.6.0_GA/zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116.tgz
 
 echo "6. Unzip / fichier d'installation Zimbra"
@@ -47,15 +47,18 @@ tar xvzf zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116.tgz
 
 echo "7. Install Zimbra "
 
-cd ./zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116
+#cd ./zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116
 
 apt-get install dnsmasq -qy
 apt-get install resolvconf -qy
 
-mv -vf install.sh install.sh.bak
+#mv -vf install.sh install.sh.bak
+mv -vf /tmp/zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116/install.sh /tmp/zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116/install.sh.bak
 
 cp -rvp ./util/utilfunc.sh /tmp/zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116/util/utilfunc.sh
 cp -rvp ./util/globals.sh  /tmp/zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116/util/globals.sh
+cp -rvp ./setup/zmsetup.pl /tmp/zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116/
+cp -rvp ./setup/postinstall.pm /tmp/zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116/
 cp -rvp install.sh /tmp/zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116/install.sh
 chmod 777 install.sh
 
@@ -63,6 +66,11 @@ hostname $ALIAS.$DOMAINE
 HOST=$(hostname)
 VAR=$(echo $IP  $HOST $ALIAS)
 sed -i "s/$IP.*$/$VAR/g" /etc/hosts
+grep ^$VAR$ /etc/hosts
+codeRetour=$?
+if [ "$codeRetour" = 1 ]; then
+echo $VAR >> /etc/hosts 
+fi
 
 ./install.sh 
 
