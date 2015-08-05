@@ -74,6 +74,8 @@ codeRetour=$?
 if [ "$codeRetour" = 1 ]; then
 echo $VAR >> /etc/hosts 
 fi
+
+cd /tmp/zcs-8.6.0_GA_1153.RHEL7_64.20141215151110
 ./install.sh --platform-override
 
 #Config Done
