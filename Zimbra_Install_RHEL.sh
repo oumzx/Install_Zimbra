@@ -43,7 +43,7 @@ service httpd stop
 
 echo "3. Downloads zimbra"
 
-cd /tmp 
+pushd /tmp 
 wget https://files.zimbra.com/downloads/8.6.0_GA/zcs-8.6.0_GA_1153.RHEL7_64.20141215151110.tgz
 
 
@@ -54,9 +54,12 @@ tar xvzf zcs-8.6.0_GA_1153.RHEL7_64.20141215151110.tgz
 
 echo "7. Install Zimbra "
 
-cd ./zcs-8.6.0_GA_1153.RHEL7_64.20141215151110
+#cd ./zcs-8.6.0_GA_1153.RHEL7_64.20141215151110
 
 mv -vf install.sh install.sh.bak
+mv -vf /tmp/zcs-8.6.0_GA_1153.RHEL7_64.20141215151110/install.sh /tmp/zcs-8.6.0_GA_1153.RHEL7_64.20141215151110/install.sh.bak
+
+popd
 
 cp -rvp ./util/utilfunc.sh /tmp/zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116/util/utilfunc.sh
 cp -rvp ./util/globals.sh  /tmp/zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116/util/globals.sh
