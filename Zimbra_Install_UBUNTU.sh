@@ -72,6 +72,7 @@ if [ "$codeRetour" = 1 ]; then
 echo $VAR >> /etc/hosts 
 fi
 
+cd /tmp/zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116/
 ./install.sh 
 
 #Config Done
