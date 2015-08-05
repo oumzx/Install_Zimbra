@@ -61,9 +61,9 @@ mv -vf /tmp/zcs-8.6.0_GA_1153.RHEL7_64.20141215151110/install.sh /tmp/zcs-8.6.0_
 
 popd
 
-cp -rvp ./util/utilfunc.sh /tmp/zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116/util/utilfunc.sh
-cp -rvp ./util/globals.sh  /tmp/zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116/util/globals.sh
-cp -rvp install.sh /tmp/zcs-8.6.0_GA_1153.UBUNTU14_64.20141215151116/install.sh
+cp -rvp ./util/utilfunc.sh /tmp/zcs-8.6.0_GA_1153.RHEL7_64.20141215151110/util/utilfunc.sh
+cp -rvp ./util/globals.sh  /tmp/zcs-8.6.0_GA_1153.RHEL7_64.20141215151110/util/globals.sh
+cp -rvp install.sh /tmp/zcs-8.6.0_GA_1153.RHEL7_64.20141215151110/install.sh
 chmod 777 install.sh
 
 hostname $ALIAS.$DOMAINE
