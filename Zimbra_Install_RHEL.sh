@@ -56,7 +56,7 @@ echo "7. Install Zimbra "
 
 #cd ./zcs-8.6.0_GA_1153.RHEL7_64.20141215151110
 
-mv -vf install.sh install.sh.bak
+#mv -vf install.sh install.sh.bak
 mv -vf /tmp/zcs-8.6.0_GA_1153.RHEL7_64.20141215151110/install.sh /tmp/zcs-8.6.0_GA_1153.RHEL7_64.20141215151110/install.sh.bak
 
 popd
