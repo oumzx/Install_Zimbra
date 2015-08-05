@@ -63,8 +63,8 @@ popd
 
 cp -rvp ./util/utilfunc.sh /tmp/zcs-8.6.0_GA_1153.RHEL7_64.20141215151110/util/utilfunc.sh
 cp -rvp ./util/globals.sh  /tmp/zcs-8.6.0_GA_1153.RHEL7_64.20141215151110/util/globals.sh
-cp -rvp ./setup/zmsetup.pl /tmp/zcs-8.6.0_GA_1153.RHEL7_64.20141215151110/util/globals.sh
-cp -rvp ./setup/postinstall.pm /tmp/zcs-8.6.0_GA_1153.RHEL7_64.20141215151110/util/globals.sh
+cp -rvp ./setup/zmsetup.pl /tmp/zcs-8.6.0_GA_1153.RHEL7_64.20141215151110/
+cp -rvp ./setup/postinstall.pm /tmp/zcs-8.6.0_GA_1153.RHEL7_64.20141215151110/
 cp -rvp install.sh /tmp/zcs-8.6.0_GA_1153.RHEL7_64.20141215151110/install.sh
 chmod 777 install.sh
 
